@@ -695,3 +695,71 @@ Executable gloss-gravity
 --         -rtsopts
 
 -- vim: nospell
+
+Executable ex-treeN
+  Main-is:        Main.hs
+  hs-source-dirs: example/TreeN
+
+  Build-depends:
+          base                          >= 4.8 && < 5
+        , gloss                         == 1.13.*
+
+  Default-Language:
+        Haskell2010
+
+  ghc-options:
+        -O2
+        -Wall
+        -threaded
+        -rtsopts
+
+Executable ex-CMD
+  Main-is:        Main.hs
+  hs-source-dirs: example/commandLine
+
+  Build-depends:
+          base                          >= 4.8 && < 5
+        , gloss                         == 1.13.*
+
+  Default-Language:
+        Haskell2010
+
+  ghc-options:
+        -O2
+        -Wall
+        -threaded
+        -rtsopts
+
+Executable ex-binTree
+  Main-is:        Main.hs
+  hs-source-dirs: example/BinTree
+
+  Build-depends:
+          base                          >= 4.8 && < 5
+        , gloss                         == 1.13.*
+
+  Default-Language:
+        Haskell2010
+
+  ghc-options:
+        -O2
+        -Wall
+        -threaded
+        -rtsopts
+
+Executable ex-breathe
+  Main-is:        Main.hs
+  hs-source-dirs: example/Breathe
+
+  Build-depends:
+          base                          >= 4.8 && < 5
+        , gloss                         == 1.13.*
+
+  Default-Language:
+        Haskell2010
+
+  ghc-options:
+        -O2
+        -Wall
+        -threaded
+        -rtsopts
