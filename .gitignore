@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 .stack-work
 dist-newstyle
 Setup.hs
 stack.yaml.lock
+=======
+.vscode/
+temp
+>>>>>>> docs/master
