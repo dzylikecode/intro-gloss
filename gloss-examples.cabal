@@ -780,3 +780,23 @@ Executable ex-ClockN
         -Wall
         -threaded
         -rtsopts
+
+Executable utils
+  Main-is:        Main.hs
+  hs-source-dirs: utils
+  other-modules:
+        Generate.Generate
+  Build-depends:
+          base                          >= 4.8 && < 5
+        , gloss                         == 1.13.*
+        , directory
+        , filepath
+
+  Default-Language:
+        Haskell2010
+
+  ghc-options:
+        -O2
+        -Wall
+        -threaded
+        -rtsopts
