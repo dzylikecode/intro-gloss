@@ -763,3 +763,20 @@ Executable ex-breathe
         -Wall
         -threaded
         -rtsopts
+
+Executable ex-ClockN
+  Main-is:        Main.hs
+  hs-source-dirs: example/ClockN
+
+  Build-depends:
+          base                          >= 4.8 && < 5
+        , gloss                         == 1.13.*
+
+  Default-Language:
+        Haskell2010
+
+  ghc-options:
+        -O2
+        -Wall
+        -threaded
+        -rtsopts

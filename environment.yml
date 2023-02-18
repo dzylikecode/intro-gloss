@@ -58,5 +58,7 @@ dependencies:
       - autopep8==2.0.1
       - executing==1.2.0
       - pycodestyle==2.10.0
+      - svg-turtle==0.4.1
+      - svgwrite==1.4.3
       - tomli==2.0.1
 prefix: /home/minus/miniconda3/envs/intro-gloss

@@ -29,10 +29,11 @@ stump :: Color -> Picture
 stump color =
   Color color $
     Polygon
-      [ (halfWidth, 0),
-        (halfWidth, height),
-        (-halfWidth, height),
-        (-halfWidth, 0)
+      [ 
+        ( halfWidth  , 0      ) ,
+        ( halfWidth  , height ) ,
+        ( -halfWidth , height ) ,
+        ( -halfWidth , 0      )
       ]
 
 -- Make a tree fractal.
@@ -46,7 +47,8 @@ tree n color =
         Scale 0.5 0.5 $
           tree (n - 1) (greener color)
    in Pictures
-        [ stump color,
+        [ 
+          stump color,
           Translate 0 height $ Rotate (-40) smallTree,
           Translate 0 height $ Rotate (40) smallTree
         ]

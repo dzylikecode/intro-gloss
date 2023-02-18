@@ -1,6 +1,3 @@
-- [x] ex-CMD
-- [x] ex-binTree
-- [x] ex-treeN
 - [ ] gloss-bitmap
 - [ ] gloss-boids
 - [ ] gloss-clock
@@ -8,13 +5,13 @@
 - [ ] gloss-conway
 - [ ] gloss-crystal
 - [ ] gloss-draw
-- [ ] gloss-easy
+- [x] gloss-easy
 - [ ] gloss-eden
-- [ ] gloss-flake
+- [x] gloss-flake
 - [ ] gloss-gameevent
 - [ ] gloss-graph
 - [ ] gloss-gravity
-- [ ] gloss-hello
+- [x] gloss-hello
 - [ ] gloss-lifespan
 - [ ] gloss-machina
 - [ ] gloss-mandel
@@ -23,7 +20,7 @@
 - [ ] gloss-ray
 - [ ] gloss-snow
 - [ ] gloss-styrene
-- [ ] gloss-tree
+- [x] gloss-tree
 - [ ] gloss-visibility
 - [ ] gloss-wave
 - [ ] gloss-zen

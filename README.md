@@ -13,3 +13,11 @@ gloss_run 4
 ```
 
 - `esc`: exit the program
+
+- [usage](https://github.com/benl23x5/gloss#usage)
+
+## idea
+
+ui: https://github.com/Shopify/cli-ui
+
+https://shopify.engineering/

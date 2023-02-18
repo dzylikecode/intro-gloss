@@ -1,5 +1,4 @@
 import os
-import sys
 
 currentFile = os.path.abspath(__file__)
 # currentFile = os.path.abspath('') # for ipynb
