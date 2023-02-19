@@ -58,9 +58,8 @@ dirToDoc (root, path, dir) =
       , workSpacePath = joinPath [path, dir]
       }
 
-generate :: String -> IO [String] 
-generate path = do
-  root <- getCurrentDirectory
+generate :: String -> String -> IO [String] 
+generate root path = do
   dirs <- getAllDirs root path
   let docs = map (\dir -> dirToDoc (root, path, dir)) dirs
   forM_ docs $ \doc -> do

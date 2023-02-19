@@ -786,6 +786,7 @@ Executable utils
   hs-source-dirs: utils
   other-modules:
         Generate.Generate
+        ShowExe.ShowExe
   Build-depends:
           base                          >= 4.8 && < 5
         , gloss                         == 1.13.*
