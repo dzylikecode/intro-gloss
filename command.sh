@@ -99,7 +99,7 @@ alias dz_help="help_docs"
 
 #########################################################################################
 
-alias gloss_ls="python utils/showExe/main.py"
+alias gloss_ls="python utils/ShowExe/main.py"
 function gloss_run(){
     echo "running: `gloss_ls $1`"
     stack exec `gloss_ls $1` $2 $3
