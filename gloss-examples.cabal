@@ -787,11 +787,13 @@ Executable utils
   other-modules:
         Generate.Generate
         ShowExe.ShowExe
+        RunExe.RunExe
   Build-depends:
           base                          >= 4.8 && < 5
         , gloss                         == 1.13.*
         , directory
         , filepath
+        , process
 
   Default-Language:
         Haskell2010

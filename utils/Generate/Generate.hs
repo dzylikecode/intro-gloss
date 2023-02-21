@@ -1,4 +1,9 @@
-module Generate.Generate where
+{-# LANGUAGE PatternGuards #-}
+
+module Generate.Generate
+  ( parseArgs
+  , generate
+  ) where
 
 -- | generate corsponding markdown file for each folder in docs 
 -- >>> generate "example/"
@@ -68,3 +73,23 @@ generate root path = do
   let summary = map transformMarkdownLink docs
   putStrLn $ unlines summary
   return summary
+
+printUsage :: IO ()
+printUsage = 
+  putStr $ unlines 
+    [ "Usage: generate [options] <path>"
+    , "path: the relative path of the project"
+    , "  e.g. generate /example/"
+    , "       `/` is the root path of the project"
+    , "options:"
+    , "  -h: show the usage"
+    ]
+
+parseArgs :: String -> [String] -> IO () 
+parseArgs root args 
+  | "-h" `elem` args 
+  = printUsage
+  | [path] <- args 
+  = void $ generate root path
+  | otherwise
+  = printUsage 

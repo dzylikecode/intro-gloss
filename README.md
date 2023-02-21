@@ -4,13 +4,17 @@ fork from [gloss](https://hackage.haskell.org/package/gloss-examples)
 
 ## command
 
-```bash
-gloss_ls
-```
+1. source command
 
-```bash
-gloss_run 4
-```
+   ```bash
+   source ./command.sh
+   ```
+
+2. run command
+
+   ```bash
+   gloss
+   ```
 
 - `esc`: exit the program
 

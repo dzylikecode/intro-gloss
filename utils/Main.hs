@@ -1,3 +1,6 @@
+{-# LANGUAGE PatternGuards #-}
+
+
 -- | command line for Utility
 -- >>> gloss
 -- show usage
@@ -17,13 +20,40 @@
 -- generate the README.md file
 -- show the summary
 
-import Generate.Generate
+import qualified Generate.Generate as Generate
 import System.Directory
-import ShowExe.ShowExe
+import qualified ShowExe.ShowExe as ShowExe
+import System.Environment
+import qualified RunExe.RunExe as RunExe
+
 
 main :: IO ()
 main = do
+  args <- getArgs
   root <- getCurrentDirectory
-  generate root "/temp"
-  showExe root >>= print
-  return ()
+  parseArgs root args
+
+printUsage :: IO ()
+printUsage = do
+  putStr $ unlines
+    [ "Usage: gloss <command>|<options> [args]"
+    , "  command:"
+    , "    ls: show the executable files"
+    , "    run: run the executable file"
+    , "    md: generate the README.md file"
+    , "  options:"
+    , "    -h: print this help message"
+    ]
+
+parseArgs :: FilePath -> [String] -> IO ()
+parseArgs root args
+  | "-h" : _ <- args  
+  = printUsage
+  | "ls" : args' <- args
+  = ShowExe.parseArgs root args'
+  | "run" : args' <- args
+  = RunExe.parseArgs root args'
+  | "md" : args' <- args
+  = Generate.parseArgs root args'
+  | otherwise
+  = printUsage

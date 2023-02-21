@@ -106,3 +106,5 @@ function gloss_run(){
 }
 
 alias build="stack build"
+
+alias gloss="stack exec utils -- "
